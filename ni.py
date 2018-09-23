@@ -19,7 +19,7 @@ def find(test,expected):
         if arr == expected['payload']:
             return 1
         else:
-            return
+            return 0
 
 # gateway function
 def review(druthers):
