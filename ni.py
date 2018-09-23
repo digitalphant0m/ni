@@ -10,8 +10,16 @@ def compare(test,expected):
         return 0
 
 # 
-def find(value):
-    return 'found value'
+def find(test,expected):
+    #return 'found value'
+        arr = []
+        
+        for i in test:
+            arr.append(i)
+        if arr == expected['payload']:
+            return 1
+        else:
+            return
 
 # gateway function
 def review(druthers):
@@ -27,14 +35,16 @@ def review(druthers):
         res = requests.post(x['url'], json=payload)
 
         if x['type'] == 'find':
-            result = find(x)
+            test1 = find(res.json(),x)
         elif x['type'] == 'compare':
-            result =  compare(res.status_code, 200)
+            test2 = compare(res.status_code, 200)
 
         tests += 1
 
-    #end result
+    result = test1+test2
+    # end result
     failed = tests - result
+
     # end time
     end = time.time()
 
