@@ -9,11 +9,9 @@ def compare(test,expected):
     else:
         return 0
 
-# 
+# find or match a given result
 def find(test,expected):
-    #return 'found value'
         arr = []
-        
         for i in test:
             arr.append(i)
         if arr == expected['payload']:
