@@ -30,7 +30,7 @@ def review(druthers):
         start = time.time()
 
         payload = x['payload']
-        res = requests.post(x['url'], json=payload)
+        res = requests.get(x['url'], json=payload)
 
         if x['type'] == 'find':
             test1 = find(res.json(),x)
