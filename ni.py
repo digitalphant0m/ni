@@ -30,8 +30,10 @@ def review(druthers):
         start = time.time()
 
         payload = x['payload']
+        # init call
         res = requests.get(x['url'], json=payload)
 
+        # config method
         if x['type'] == 'find':
             test1 = find(res.json(),x)
         elif x['type'] == 'compare':
