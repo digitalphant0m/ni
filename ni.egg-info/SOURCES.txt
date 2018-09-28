@@ -1,4 +1,6 @@
 README.md
+__init__.py
+ni.py
 setup.py
 ni.egg-info/PKG-INFO
 ni.egg-info/SOURCES.txt
