@@ -1,7 +1,7 @@
 README.md
-__init__.py
-ni.py
 setup.py
+ni/__init__.py
+ni/ni.py
 ni.egg-info/PKG-INFO
 ni.egg-info/SOURCES.txt
 ni.egg-info/dependency_links.txt
